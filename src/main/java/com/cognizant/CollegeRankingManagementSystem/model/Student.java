@@ -3,23 +3,33 @@ package com.cognizant.CollegeRankingManagementSystem.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/*
+ * Spring repository is used in this project.
+ * This is a model class for the Student Information.
+ */
+
 @Entity
 public class Student {
 
 	@Id
-	private int studentId;
+	private String studentId;
 	private String firstName;
 	private String lastName;
 	private String branch;
 	private int score;
 	private String location;
+	
+	// New parameters:
+	private String catagory;
+	private int nationalExamRank;
 
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Student(int studentId, String firstName, String lastName, String branch, int score, String location) {
+	public Student(String studentId, String firstName, String lastName, String branch, int score, String location,
+			String catagory, int nationalExamRank) {
 		super();
 		this.studentId = studentId;
 		this.firstName = firstName;
@@ -27,13 +37,15 @@ public class Student {
 		this.branch = branch;
 		this.score = score;
 		this.location = location;
+		this.catagory = catagory;
+		this.nationalExamRank = nationalExamRank;
 	}
 
-	public int getStudentId() {
+	public String getStudentId() {
 		return studentId;
 	}
 
-	public void setStudentId(int studentId) {
+	public void setStudentId(String studentId) {
 		this.studentId = studentId;
 	}
 
@@ -77,10 +89,26 @@ public class Student {
 		this.location = location;
 	}
 
+	public String getCatagory() {
+		return catagory;
+	}
+
+	public void setCatagory(String catagory) {
+		this.catagory = catagory;
+	}
+
+	public int getNationalExamRank() {
+		return nationalExamRank;
+	}
+
+	public void setNationalExamRank(int nationalExamRank) {
+		this.nationalExamRank = nationalExamRank;
+	}
+
 	@Override
 	public String toString() {
 		return "Student [studentId=" + studentId + ", firstName=" + firstName + ", lastName=" + lastName + ", branch="
-				+ branch + ", score=" + score + ", location=" + location + "]";
+				+ branch + ", score=" + score + ", location=" + location + ", catagory=" + catagory
+				+ ", nationalExamRank=" + nationalExamRank + "]";
 	}
-
 }

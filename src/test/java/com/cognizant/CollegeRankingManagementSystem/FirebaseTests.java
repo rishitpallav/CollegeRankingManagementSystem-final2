@@ -27,7 +27,7 @@ class FirebaseTests {
 	@Test
 	public void testCollegeAuthentication()
 	{
-		CollegeAuthentication newCollegeAuthentication = new CollegeAuthentication("AIzaSyBdEdftRcsKKikySNTf131WC9khUBB67zU", "college-ranking-system.firebaseapp.com", "college-ranking-system", "college-ranking-system.appspot.com", "494464462526", "1:494464462526:web:9fac42a7b48eae31e278ef");
+		CollegeAuthentication newCollegeAuthentication = new CollegeAuthentication("FIREBASE-API", "college-ranking-system.firebaseapp.com", "college-ranking-system", "college-ranking-system.appspot.com", "494464462526", "1:494464462526:web:9fac42a7b48eae31e278ef");
 		assertEquals(collegeAuthentication.toString(), newCollegeAuthentication.toString());
 	}
 	
@@ -35,7 +35,7 @@ class FirebaseTests {
 	public void testCollegeAuthenticationSetters()
 	{
 		CollegeAuthentication newCollegeAuthentication = new CollegeAuthentication();
-		newCollegeAuthentication.setApiKey("AIzaSyBdEdftRcsKKikySNTf131WC9khUBB67zU");
+		newCollegeAuthentication.setApiKey("FIREBASE-API");
 		newCollegeAuthentication.setAppId("1:494464462526:web:9fac42a7b48eae31e278ef");
 		newCollegeAuthentication.setAuthDomain("college-ranking-system.firebaseapp.com");
 		newCollegeAuthentication.setMessagingSenderId("494464462526");
